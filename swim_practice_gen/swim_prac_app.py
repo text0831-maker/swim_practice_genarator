@@ -145,11 +145,11 @@ if st.button("Generate Practice"):
     #Drill Help
     st.header("Drill Help")
 
-    with open("Swim Drill Guide.pdf", "rb") as file:
+    with open("Complete Swim Drill Guide.pdf", "rb") as file:
         pdf = file.read()
 
     st.download_button(
-        label="Open Drill Guide",
+        label="Complete Swim Drill Guide",
         data=pdf,
         file_name="Swim Drill Guide.pdf",
         mime="application/pdf"
