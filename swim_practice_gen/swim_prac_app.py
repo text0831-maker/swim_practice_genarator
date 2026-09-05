@@ -1,4 +1,5 @@
 #Swimming practice generator
+import os
 import webbrowser
 import random
 import streamlit as st
@@ -145,7 +146,10 @@ if st.button("Generate Practice"):
     #Drill Help
     st.header("Drill Help")
 
-    with open("Complete Swim Drill Guide.pdf", "rb") as file:
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(script_dir, "Complete Swim Drill Guide.pdf")
+
+    with open(file_path, "rb") as file:
         pdf = file.read()
 
     st.download_button(
