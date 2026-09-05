@@ -144,6 +144,13 @@ if st.button("Generate Practice"):
 
     #Drill Help
     st.header("Drill Help")
-    
-    if st.button("Open Drill Guide"):
-        webbrowser.open("Swim Drill Guide.pdf")
+
+    with open("Swim Drill Guide.pdf", "rb") as file:
+        pdf = file.read()
+
+    st.download_button(
+        label="Open Drill Guide",
+        data=pdf,
+        file_name="Swim Drill Guide.pdf",
+        mime="application/pdf"
+    )
