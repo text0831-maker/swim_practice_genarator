@@ -143,5 +143,7 @@ if st.button("Generate Practice"):
     st.write("500 Free")
 
     #Drill Help
+    st.header("Drill Help")
+    
     if st.button("Open Drill Guide"):
         webbrowser.open("Swim Drill Guide.pdf")
